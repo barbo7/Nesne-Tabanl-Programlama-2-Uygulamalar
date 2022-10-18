@@ -1,0 +1,20 @@
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.exe.config
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.exe
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.pdb
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csprojAssemblyReference.cache
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.Form1.resources
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.Properties.Resources.resources
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csproj.GenerateResource.cache
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csproj.CoreCompileInputs.cache
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.exe
+C:\Users\as\source\repos\WindowsFormsApp46\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.pdb
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.exe.config
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.exe
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\bin\Debug\WindowsFormsApp46.pdb
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csprojAssemblyReference.cache
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.Form1.resources
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.Properties.Resources.resources
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csproj.GenerateResource.cache
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.csproj.CoreCompileInputs.cache
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.exe
+C:\Users\as\source\repos\Veri Tabanı Uygulaması\WindowsFormsApp46\obj\Debug\WindowsFormsApp46.pdb
