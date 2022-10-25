@@ -1,0 +1,10 @@
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\bin\Debug\WindowsFormsApp48.exe.config
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\bin\Debug\WindowsFormsApp48.exe
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\bin\Debug\WindowsFormsApp48.pdb
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.csprojAssemblyReference.cache
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.Form1.resources
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.Properties.Resources.resources
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.csproj.GenerateResource.cache
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.csproj.CoreCompileInputs.cache
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.exe
+C:\Users\as\source\repos\WindowsFormsApp48\WindowsFormsApp48\obj\Debug\WindowsFormsApp48.pdb
