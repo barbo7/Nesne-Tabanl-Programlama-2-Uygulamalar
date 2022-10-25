@@ -1,8 +1,14 @@
 # Nesne-Tabanl-Programlama-2-Uygulamalar
 Deu Nesne tabanlı programlama dersinde yaptığımız C# tabanlı uygulamalar
 
+/////////////////////////Veri Tabanı Uygulaması\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
+Bir öğrencinin ad soyad okul no tc no adres bilgileirni tutan veritabanı uygulamasını yazınız.
+Koşul ::> Bütün işlemler bittikten sonra veri tabanındaki bilgilr datagridview ve textBoxlar içinde görünmeli
+ 
 
+bir öğrencinin tc, okulno,sınıfı,şubesi,adı,soyadı,adresi,tel no bilgileri veritabanında tutulmak istenmektedir.Buna göre verilen verilerin veritabanına kaydeden program komutunu yazınız.
+Koşul::> Her yeni kayıt için yeni bir kayıt alanı açılmalı ve aktar butonu ile veriler data grid üstüne aktarılmalıdır. Veriler aktarıldıktan sonra kaydet butonu ile veri tabanına kaydedilmelidir.Data grid üstünde görüntülenen verilerin bir önceki bir sonraki ilk ve son kayıtların üzernde gezinti yapılabilmelidir.
 
 /////////////////Datagrid ile veritabanı uygulaması\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 Soru ==>
