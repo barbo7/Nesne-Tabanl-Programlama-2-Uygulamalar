@@ -2,7 +2,7 @@
 Deu Nesne tabanlı programlama dersinde yaptığımız C# tabanlı uygulamalar
 
 /////////////////////////Veri Tabanı Uygulaması\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-
+__Soru__
 Bir öğrencinin ad soyad okul no tc no adres bilgileirni tutan veritabanı uygulamasını yazınız.
 Koşul ::> Bütün işlemler bittikten sonra veri tabanındaki bilgilr datagridview ve textBoxlar içinde görünmeli
  
@@ -11,7 +11,7 @@ bir öğrencinin tc, okulno,sınıfı,şubesi,adı,soyadı,adresi,tel no bilgile
 Koşul::> Her yeni kayıt için yeni bir kayıt alanı açılmalı ve aktar butonu ile veriler data grid üstüne aktarılmalıdır. Veriler aktarıldıktan sonra kaydet butonu ile veri tabanına kaydedilmelidir.Data grid üstünde görüntülenen verilerin bir önceki bir sonraki ilk ve son kayıtların üzernde gezinti yapılabilmelidir.
 
 /////////////////Datagrid ile veritabanı uygulaması\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-Soru ==>
+__Soru__
 adı deneme olan bir veri tabanı yaratın.
 Bıu veri tabanı içinde 3 adet table olsun.
 personel
@@ -32,11 +32,24 @@ Koşul==> Buton tıklandığı zaman form2 ekrana gelsin form2 ekrana geldiğind
 **********************************************************************************************************************************************************
 
 ////////////////////////////////DataReader Kullanımı\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
-Soru ==>
+__Soru__
 Axess'te oluşturulmuş bir veritabanındaki verileri 
 1. list box içerisinde
 2. comboBox içerisinde
 3. TextBoxlar içerisidne görüntüleyen program kodunu yazınız.
 Koşul::>
 Alan sayısı kadar nesneler kullanın;
+
+/////////////////////////////HashTable ile Sql Uygulamaları\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+__Soru__
+N sayıda öğrencinin okul numarası ve ad-soyad klavyeden alınmak suretiyle
+Tüm bilgilerin DataGridView üzerinde görüntülenmesi istenmektedir.
+Veriler görüntülendikten sorna buton tıklaması ile verilerin kaydı yapılmalıdır.
+Buna göre kodları yazınız.
+Koşul::> 
+~Hashtable mantığını kullnarak yapınız.
+~Hashtable'de 2.yol olan anahtar ve değer ekleme yöntemini kullanınız.
+~n sayıdaki eleman değeri klavyeden input ile alınmalıdır.
+~Döngü kullanacaksanız do while döngüsü ile çözüme ulaşınız.
 
