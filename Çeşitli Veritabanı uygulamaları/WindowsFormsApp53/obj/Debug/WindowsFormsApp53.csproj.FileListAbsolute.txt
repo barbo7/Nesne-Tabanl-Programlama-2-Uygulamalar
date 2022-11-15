@@ -1,0 +1,10 @@
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\bin\Debug\WindowsFormsApp53.exe.config
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\bin\Debug\WindowsFormsApp53.exe
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\bin\Debug\WindowsFormsApp53.pdb
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.csprojAssemblyReference.cache
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.Form1.resources
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.Properties.Resources.resources
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.csproj.GenerateResource.cache
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.csproj.CoreCompileInputs.cache
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.exe
+C:\Users\as\source\repos\WindowsFormsApp53\WindowsFormsApp53\obj\Debug\WindowsFormsApp53.pdb
