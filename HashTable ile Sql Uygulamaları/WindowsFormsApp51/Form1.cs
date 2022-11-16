@@ -23,8 +23,8 @@ namespace WindowsFormsApp51
 
             do
             {
-                string key = Interaction.InputBox("Key değerini giriniz(int):");
-                string val = Interaction.InputBox("Value değerini giriniz:");
+                string key = Interaction.InputBox("Okul no giriniz:");
+                string val = Interaction.InputBox("Ad Soyad değerini giriniz:");
 
                 con.Open();
                 cmd = new SqlCommand("Insert Into tablo(okul_no,ad_soyad)  values(" + key + ",'" + val + "')", con);
