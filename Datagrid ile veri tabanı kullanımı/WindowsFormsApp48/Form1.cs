@@ -1,114 +1,34 @@
 using System;
+using System.Collections;
 using System.Data;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using Microsoft.VisualBasic;
 
-namespace WindowsFormsApp48
+namespace WindowsFormsApp53
 {
     public partial class Form1 : Form
-    {   //veritabanı yeri
-        SqlConnection con = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=deneme;Integrated Security=True");
-
+    {
+        SqlConnection con = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=dene;Integrated Security=True");
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bindingSource1.MoveFirst();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            bindingSource1.MovePrevious();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            bindingSource1.MoveLast();
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            bindingSource1.MoveNext();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter("select * from personel",con);
-            DataTable dt1 = new DataTable();
-            da.Fill(dt1);
-            bindingSource1.DataSource = dt1;
-            dataGridView1.DataSource = bindingSource1;
+            datagridd();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void datagridd()
         {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Insert into personel(id,a) values(" + textBox1.Text + ",'" + textBox2.Text + "')", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
+            SqlDataAdapter da1 = new SqlDataAdapter("Select * from ders", con);
+            SqlDataAdapter da2 = new SqlDataAdapter("Select * from ogrenci", con);
+            SqlDataAdapter da3 = new SqlDataAdapter("Select * from sinav", con);
 
-        private void button9_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Insert into maas(id,b) values(" + textBox1.Text + ",'" + textBox2.Text + "')", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-        private void button10_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("Insert into cv(id,c) values(" + textBox1.Text + ",'" + textBox2.Text + "')", con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("delete from personel where id=" + textBox1.Text,con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-        private void button11_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("delete from maas where id=" + textBox1.Text,con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-        private void button12_Click(object sender, EventArgs e)
-        {
-            con.Open();
-            SqlCommand cmd = new SqlCommand("delete from cv where id=" + textBox1.Text, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        }
-
-
-
-        private void button15_Click(object sender, EventArgs e)
-        {
-            SqlDataAdapter da1 = new SqlDataAdapter("select * from personel", con);
-            SqlDataAdapter da2 = new SqlDataAdapter("select * from maas", con);
-            SqlDataAdapter da3 = new SqlDataAdapter("select * from cv", con);
-
-            DataTable dt1 = new DataTable("Personel");
-            DataTable dt2 = new DataTable("maas");
-            DataTable dt3 = new DataTable("cv");
+            DataTable dt1 =  new DataTable("ders");
+            DataTable dt2 = new DataTable("ogrenci");
+            DataTable dt3 =  new DataTable("sinav");
 
             da1.Fill(dt1);
             da2.Fill(dt2);
@@ -119,55 +39,95 @@ namespace WindowsFormsApp48
             ds.Tables.Add(dt2);
             ds.Tables.Add(dt3);
 
-            DataRelation dr = new DataRelation("ABC", dt1.Columns["id"], dt2.Columns["id"]);
+            DataRelation dr = new DataRelation("Ögrenci", dt1.Columns["ders_no"], dt2.Columns["no"]);
             ds.Relations.Add(dr);
-            DataRelation dr1 = new DataRelation("ABCD", dt2.Columns["id"], dt3.Columns["id"]);
+            DataRelation dr1 = new DataRelation("Notlar", dt2.Columns["no"], dt3.Columns["ders_no"]);
             ds.Relations.Add(dr1);
 
             dataGrid1.DataSource = ds;
         }
 
-        private void button8_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            dgview();
+
+            Hashtable ht = new Hashtable();
+            ht.Add("ad", Interaction.InputBox("Ad giriniz"));
+            ht.Add("soyad", Interaction.InputBox("Soyad giriniz"));
+            ht.Add("telefon", Interaction.InputBox("telefon no giriniz"));
+
+            string anahtar = "", deger = "";
+            foreach (var i in ht.Keys)
+                anahtar += i + ",";
+
+            foreach (var k in ht.Values)
+                deger += "'" + k + "',";
             con.Open();
-            SqlCommand cmd = new SqlCommand("update personel set a='" + textBox2.Text + "' where id=" + textBox1.Text, con);
+            SqlCommand cmd = new SqlCommand("Insert into AltinElma(" + anahtar.Trim(',') + ") values(" + deger.Trim(',') + ")", con);
             cmd.ExecuteNonQuery();
             con.Close();
+
+            dgview();
+        }
+        private void dgview()
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select * from AltinElma", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
 
-        private void button13_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
+            ArrayList al = new ArrayList();
+            al.Add(textBox2.Text);
+            al.Add(textBox3.Text);
+            al.Add(textBox4.Text);
+
             con.Open();
-            SqlCommand cmd = new SqlCommand("update maas set b='" + textBox2.Text + "' where id=" + textBox1.Text, con);
+            SqlCommand cmd = new SqlCommand("Insert into AltinElma(ad,soyad,telefon) values('"+al[0] +"','"+al[1]+"',"+al[2]+")", con);
             cmd.ExecuteNonQuery();
             con.Close();
+            dgview();
         }
 
-        private void button14_Click(object sender, EventArgs e)
+        private void button4_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter da = new SqlDataAdapter("Select " + textBox1.Text + " from AltinElma", con);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("update cv set c='" + textBox2.Text + "' where id=" + textBox1.Text, con);
+            SqlCommand cmd = new SqlCommand("delete from ogrenci where ad='" + textBox2.Text+"'",con);
             cmd.ExecuteNonQuery();
             con.Close();
+            datagridd();
         }
 
-        private void button16_Click(object sender, EventArgs e)
+        private void button5_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da1 = new SqlDataAdapter("select * from maas", con);
-            DataTable dt2 = new DataTable();
-            da1.Fill(dt2);
-            bindingSource1.DataSource = dt2;
-            dataGridView1.DataSource = bindingSource1;
-
+            con.Open();
+            SqlCommand cmd1 = new SqlCommand("Insert Into ogrenci(ad,soyad,no) values('" + textBox2.Text + "','" + textBox3.Text + "'," + textBox4.Text + ")",con);
+            SqlCommand cmd2 = new SqlCommand("Insert Into ders(ders_no,ders_adi) values(" + textBox4.Text + ",'" + textBox5.Text + "')", con);
+            SqlCommand cmd3 = new SqlCommand("Insert Into sinav(ders_no,vize1,vize2,final) values(" + textBox4.Text + "," + textBox6.Text + "," + textBox7.Text + "," + textBox8.Text + ")", con);
+            cmd1.ExecuteNonQuery();
+            cmd2.ExecuteNonQuery();
+            cmd3.ExecuteNonQuery();
+            con.Close();
+            datagridd();
         }
 
-        private void button17_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da1 = new SqlDataAdapter("select * from cv", con);
-            DataTable dt3 = new DataTable();
-            da1.Fill(dt3);
-            bindingSource1.DataSource = dt3;
-            dataGridView1.DataSource = bindingSource1;
+            con.Open();
+            SqlCommand cmd = new SqlCommand("update sinav set vize2=" + textBox7.Text + " where ders_no=" + textBox4.Text, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            datagridd();
         }
     }
 }
