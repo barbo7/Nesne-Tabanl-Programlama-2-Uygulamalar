@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+using System;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
@@ -14,7 +8,6 @@ namespace WindowsFormsApp48
     public partial class Form1 : Form
     {   //veritabanı yeri
         SqlConnection con = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=deneme;Integrated Security=True");
-        BindingSource bs = new BindingSource();
 
         public Form1()
         {
@@ -105,6 +98,8 @@ namespace WindowsFormsApp48
             con.Close();
         }
 
+
+
         private void button15_Click(object sender, EventArgs e)
         {
             SqlDataAdapter da1 = new SqlDataAdapter("select * from personel", con);
@@ -125,9 +120,9 @@ namespace WindowsFormsApp48
             ds.Tables.Add(dt3);
 
             DataRelation dr = new DataRelation("ABC", dt1.Columns["id"], dt2.Columns["id"]);
-            dr = new DataRelation("ABC", dt2.Columns["id"], dt3.Columns["id"]);
-
             ds.Relations.Add(dr);
+            DataRelation dr1 = new DataRelation("ABCD", dt2.Columns["id"], dt3.Columns["id"]);
+            ds.Relations.Add(dr1);
 
             dataGrid1.DataSource = ds;
         }
