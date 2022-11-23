@@ -25,20 +25,20 @@ namespace WindowsFormsApp46
             SqlDataAdapter da = new SqlDataAdapter("SELECT * FROM kimlik", con);
             DataTable dt = new DataTable();
             da.Fill(dt);
-            bindingSource1.DataSource = dt;
+            bs.DataSource = dt;
 
-            dataGridView1.DataSource = bindingSource1;
-            textBox1.DataBindings.Add("Text", bindingSource1,"okulno");
+            dataGridView1.DataSource = bs;
+            /*textBox1.DataBindings.Add("Text", bindingSource1,"okulno");
             textBox2.DataBindings.Add("Text", bindingSource1, "Ad");
             textBox3.DataBindings.Add("Text", bindingSource1, "Soyad");
             textBox4.DataBindings.Add("Text", bindingSource1, "Tc");
-            textBox5.DataBindings.Add("Text", bindingSource1, "Adres");
+            textBox5.DataBindings.Add("Text", bindingSource1, "Adres");*/
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            bindingSource1.AddNew(); // By işlem sadece form üzeirndeki nesnelerde yeni kayıt alanı açmak için kullanılır. 
+            bs.AddNew(); // By işlem sadece form üzeirndeki nesnelerde yeni kayıt alanı açmak için kullanılır. 
             textBox1.Focus();                        //Asla veri tabanına müdale değildir.
             
         }
@@ -51,22 +51,22 @@ namespace WindowsFormsApp46
 
         private void button3_Click(object sender, EventArgs e)
         {
-            bindingSource1.MoveFirst(); //İlk kayıt'a gitmek için kullanılır.
+            bs.MoveFirst(); //İlk kayıt'a gitmek için kullanılır.
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            bindingSource1.MovePrevious(); //Önceki kayıt'a gitmek için kullanılır.
+            bs.MovePrevious(); //Önceki kayıt'a gitmek için kullanılır.
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            bindingSource1.MoveLast(); //Son kayıt'a gitmek için kullanılır.
+            bs.MoveLast(); //Son kayıt'a gitmek için kullanılır.
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            bindingSource1.MoveNext(); //Sonraki kayıt'a gitmek için kullanılır.
+            bs.MoveNext(); //Sonraki kayıt'a gitmek için kullanılır.
         }
 
         private void button7_Click(object sender, EventArgs e)
