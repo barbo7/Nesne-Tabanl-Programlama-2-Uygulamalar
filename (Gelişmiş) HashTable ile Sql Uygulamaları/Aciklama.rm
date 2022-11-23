@@ -1,0 +1,6 @@
+Bu uygulama Hash table kullannarak bilgi alma ve data base'e göndermek için yapılmıştır.
+Öncelikleri veri al tuşuna bastıktan sonra girmek istediğimiz veri sayısını yazıp, sonrasında veri girişi yapmaya başlıyoruz.
+Yazdığımız girişler öncelikle listBox'lara gönderiliyor
+Sonrasında ise Veritabanı'na göndermek için diğer butona bastığımızda veri tabanına göndermiş bulunuyoruz.
+**************
+Bu uygulama geliştirilirken HashTable, InputBox, method vs. kullanılmıştır.
