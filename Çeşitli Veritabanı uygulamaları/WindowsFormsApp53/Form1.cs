@@ -40,9 +40,9 @@ namespace WindowsFormsApp53
             ds.Tables.Add(dt3);
 
             DataRelation dr = new DataRelation("abc", dt1.Columns["no"], dt2.Columns["ders_no"]);
-            dr = new DataRelation("abc", dt2.Columns["ders_no"], dt3.Columns["ders_no"]);
-
             ds.Relations.Add(dr);
+            DataRelation dr2 = new DataRelation("abcd", dt2.Columns["ders_no"], dt3.Columns["ders_no"]);
+            ds.Relations.Add(dr2);
 
             dataGrid1.DataSource = ds;
         }
