@@ -7,8 +7,7 @@ namespace WindowsFormsApp50
     public partial class Form1 : Form
     {
         SqlConnection con = new SqlConnection("Data Source=LENOVO\\SQLEXPRESS;Initial Catalog=Bora;Integrated Security=True");
-        SqlCommand cmd;
-        SqlDataReader dr;
+
         public Form1()
         {
             InitializeComponent();
@@ -17,8 +16,8 @@ namespace WindowsFormsApp50
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            cmd = new SqlCommand("Select * from ogrenci", con);
-            dr = cmd.ExecuteReader();
+            SqlCommand cmd = new SqlCommand("Select * from ogrenci", con);
+            SqlDataReader dr = cmd.ExecuteReader();
             while(dr.Read())
             {
                 listBox1.Items.Add(dr[0]);
