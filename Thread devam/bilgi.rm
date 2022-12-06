@@ -1,0 +1,11 @@
+Form üzerine 5 adet listBox ,2 adet buton yerleştirin.
+Form Load edildikten sonra 
+*listBox1 1'den başlamak üzere 1'er 1'er sayıları arttırarak 
+*listBox2 içerisinde değeri sabit olmak kaydıyla 2021 sabit olmak şartıyla 707001'den başlayan sayıları 
+999999 kadar işleten ve bu sayılara ulaştığı zaman siğstemi durduran.
+*listBox3 içinde 10 adet programın ismini rastgele olarak dağıtarak görüntüleyen
+*ListBox4 içerisinde rastgele program isimlerini dağıttığı listBox3'e bakarak 
+Buradaki programın özelliğine göre buradaki programın özelliğine göre teknik veya iktisadi programlar olarak görüntüleyen.
+*ListBox5'in içerisinde 1 ile 81 arasındaki sayıları rastgele dağıtarak görüntleyen program kodunu yazınız.
+Koşul::> Tread kullanınız.
+Koşul::> Button2 Tıklandığı zaman günün tarihi, saati, son dönen bilgiler label üzerinde görüntülensin.
